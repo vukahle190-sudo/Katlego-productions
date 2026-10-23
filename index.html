@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090816">
+  <meta name="description" content="Welcome to VUKAHLE PRODUCTIONS — explore AI, creativity and technology.">
+
+  <title>VUKAHLE PRODUCTIONS</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #090816;
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 7%;
+      background: rgba(15, 12, 35, 0.95);
+      border-bottom: 1px solid #302451;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 19px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #a78bfa;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #ddd6fe;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: white;
+    }
+
+    .hero {
+      min-height: 76vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 65px 20px;
+      background:
+        radial-gradient(ellipse at top, #38216b 0%, transparent 55%),
+        linear-gradient(145deg, #090816, #15102c);
+    }
+
+    .badge {
+      padding: 9px 16px;
+      border: 1px solid #7654c9;
+      background: #21163f;
+      border-radius: 30px;
+      color: #d8c8ff;
+      font-size: 12px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 8vw, 66px);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      max-width: 800px;
+    }
+
+    h1 span {
+      color: #a78bfa;
+    }
+
+    .hero p {
+      color: #c4bfd6;
+      max-width: 570px;
+      line-height: 1.8;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 23px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      opacity: 0.9;
+    }
+
+    .btn-ai {
+      background: linear-gradient(135deg, #a78bfa, #7546db);
+      color: white;
+      box-shadow: 0 8px 30px #7043c540;
+    }
+
+    .btn-whatsapp {
+      background: #168c53;
+      color: white;
+    }
+
+    .section {
+      padding: 65px 7%;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: #aaa5bf;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #1b1730, #111020);
+      border: 1px solid #352950;
+      border-radius: 18px;
+      padding: 28px 22px;
+      text-align: left;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #9370db;
+    }
+
+    .card .emoji {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 19px;
+    }
+
+    .card p {
+      color: #b5b0c8;
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      color: #bba6ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .contact {
+      background: #120e25;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      border-top: 1px solid #302451;
+      color: #9690ad;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 17px 5%;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      nav {
+        gap: 13px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .section {
+        padding: 48px 5%;
+      }
+
+      .btn {
+        padding: 14px 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="#home" class="logo"
+       style="color:white;text-decoration:none">
+      VUKAHLE <span>PRODUCTIONS</span>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#apps">Apps</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="badge">✦ WELCOME TO VUKAHLE PRODUCTIONS</div>
+
+      <h1>
+        Imagine More.<br>
+        <span>Create Without Limits.</span>
+      </h1>
+
+      <p>
+        Welcome to VUKAHLE PRODUCTIONS, a home for technology,
+        creativity and artificial intelligence. Discover our AI
+        tools and bring your ideas to life.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-ai"
+           href="https://stem-ai-d7sbha.v2.appdeploy.ai/?utm_source=chatgpt.com"
+           target="_blank" rel="noopener noreferrer">
+          ✨ Explore STEM AI
+        </a>
+
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/27635168894"
+           target="_blank" rel="noopener noreferrer">
+          💬 Chat with us on WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="apps">
+      <h2>Explore Our World</h2>
+      <p class="section-intro">
+        Discover tools designed to help you learn, think and create.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="emoji">🤖</div>
+          <h3>STEM AI</h3>
+          <p>
+            Your AI companion for questions, learning, problem-solving,
+            image understanding and AI image creation.
+          </p>
+          <a href="https://stem-ai-d7sbha.v2.appdeploy.ai/?utm_source=chatgpt.com"
+             target="_blank" rel="noopener noreferrer">
+            Open STEM AI →
+          </a>
+        </article>
+
+        <article class="card">
+          <div class="emoji">💡</div>
+          <h3>Creative Ideas</h3>
+          <p>
+            A space for inspiration, new projects and exciting ideas
+            in technology and creativity.
+          </p>
+          <a href="#contact">Get in touch →</a>
+        </article>
+
+        <article class="card">
+          <div class="emoji">📱</div>
+          <h3>Connect With Us</h3>
+          <p>
+            Contact VUKAHLE PRODUCTIONS directly on WhatsApp
+            to ask questions or discuss our projects.
+          </p>
+          <a href="https://wa.me/27635168894"
+             target="_blank" rel="noopener noreferrer">
+            Message us →
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <h2>Let's Connect</h2>
+      <p class="section-intro">
+        Have a question or an idea? Send us a WhatsApp message.
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/27635168894"
+           target="_blank" rel="noopener noreferrer">
+          💬 Contact on WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> VUKAHLE PRODUCTIONS</p>
+    <p>Powered by creativity, innovation and AI.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+  </html>
